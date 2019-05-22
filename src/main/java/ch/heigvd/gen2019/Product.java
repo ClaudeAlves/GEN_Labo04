@@ -1,7 +1,6 @@
 package ch.heigvd.gen2019;
 
 public class Product {
-    public static final int SIZE_NOT_APPLICABLE = -1;
     private String code;
     private Color color;
     private Size size;
@@ -16,34 +15,6 @@ public class Product {
         this.currency = currency;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public Size getSize() {
-        return size;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    String getColorFor() {
-        return color.toString();
-    }
-
-    String getSizeFor() {
-        return size.toString();
-    }
-
     void getProductContent(StringBuffer sb) {
         sb.append("{");
         sb.append("\"code\": \"");
@@ -53,7 +24,7 @@ public class Product {
         sb.append(color.toString());
         sb.append("\", ");
 
-        if (!getSize().equals(Size.SIZE_NOT_APPLICABLE)) {
+        if (!size.equals(Size.SIZE_NOT_APPLICABLE)) {
             sb.append("\"size\": \"");
             sb.append(size.toString());
             sb.append("\", ");

@@ -30,15 +30,15 @@ public class Order {
     void getContent(StringBuffer sb) {
         sb.append("{");
         sb.append("\"id\": ");
-        sb.append(getOrderId());
+        sb.append(id);
         sb.append(", ");
         sb.append("\"products\": [");
-        for (int j = 0; j < getProductsCount(); j++) {
-            Product product = getProduct(j);
+
+        for (Product product: products) {
             product.getProductContent(sb);
         }
 
-        if (getProductsCount() > 0) {
+        if (products.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
 

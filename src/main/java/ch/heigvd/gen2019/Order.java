@@ -15,11 +15,9 @@ public class Order {
     }
 
     void getContent(StringBuffer sb) {
-        sb.append("{");
-        sb.append("\"id\": ");
+        sb.append("{\"id\": ");
         sb.append(id);
-        sb.append(", ");
-        sb.append("\"products\": [");
+        sb.append(", \"products\": [");
 
         for (Product product: products) {
             product.getProductContent(sb);
@@ -29,7 +27,6 @@ public class Order {
             sb.delete(sb.length() - 2, sb.length());
         }
 
-        sb.append("]");
-        sb.append("}, ");
+        sb.append("]}, ");
     }
 }

@@ -16,11 +16,9 @@ public class Product {
     }
 
     void getProductContent(StringBuffer sb) {
-        sb.append("{");
-        sb.append("\"code\": \"");
+        sb.append("{\"code\": \"");
         sb.append(code);
-        sb.append("\", ");
-        sb.append("\"color\": \"");
+        sb.append("\", \"color\": \"");
         sb.append(color.toString());
         sb.append("\", ");
 
@@ -32,8 +30,7 @@ public class Product {
 
         sb.append("\"price\": ");
         sb.append(price);
-        sb.append(", ");
-        sb.append("\"currency\": \"");
+        sb.append(", \"currency\": \"");
         sb.append(currency);
         sb.append("\"}, ");
     }

@@ -10,10 +10,6 @@ public class Orders {
         orders.add(order);
     }
 
-    public int getOrdersCount() {
-        return orders.size();
-    }
-
     public Order getOrder(int i) {
         return orders.get(i);
     }
@@ -21,12 +17,12 @@ public class Orders {
     public String getContents() {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
-        for (int i = 0; i < getOrdersCount(); i++) {
+        for (int i = 0; i < orders.size(); i++) {
             Order order = getOrder(i);
             order.getContent(sb);
         }
 
-        if (getOrdersCount() > 0) {
+        if (orders.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
 

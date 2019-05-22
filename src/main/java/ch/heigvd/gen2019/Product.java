@@ -47,23 +47,23 @@ public class Product {
     void getProductContent(StringBuffer sb) {
         sb.append("{");
         sb.append("\"code\": \"");
-        sb.append(getCode());
+        sb.append(code);
         sb.append("\", ");
         sb.append("\"color\": \"");
-        sb.append(getColorFor());
+        sb.append(color.toString());
         sb.append("\", ");
 
         if (!getSize().equals(Size.SIZE_NOT_APPLICABLE)) {
             sb.append("\"size\": \"");
-            sb.append(getSizeFor());
+            sb.append(size.toString());
             sb.append("\", ");
         }
 
         sb.append("\"price\": ");
-        sb.append(getPrice());
+        sb.append(price);
         sb.append(", ");
         sb.append("\"currency\": \"");
-        sb.append(getCurrency());
+        sb.append(currency);
         sb.append("\"}, ");
     }
 }

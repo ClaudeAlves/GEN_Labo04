@@ -23,11 +23,11 @@ Il est demander d'appliquer les refactorings un par un, en commitant chaque chan
 - Long method
 
 ### Type de refactoring appliqué
- Innapropriate intimacy : Move Method
- Data class : Move Method
- Switch statements : Replace Type Code with Subclasses
- Speculative generality : Collapse Hierarchy
- Dead code : Delete
- Long method : split into others Methods
- Large class : split, extract to subclasses
- Lazy class : Inline class treatment
+- Innapropriate intimacy : Move Method
+- Data class : Move Method
+- Switch statements : Replace Type Code with Subclasses
+- Speculative generality : Collapse Hierarchy
+- Dead code : Delete
+- Long method : split into others Methods
+- Large class : split, extract to subclasses
+- Lazy class : Inline class treatment
